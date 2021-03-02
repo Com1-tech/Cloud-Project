@@ -4,7 +4,9 @@ Azure Environment
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/Com1-tech/Cloud-Project/tree/main/Diagrams(Images/Network-Diagram.drawio)
+https://github.com/Com1-tech/Cloud-Project/tree/main/Diagrams
+
+(Images/Network-Diagram.drawio)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, selected portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
