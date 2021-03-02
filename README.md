@@ -59,11 +59,9 @@ The machines on the internal network are not exposed to the public Internet.
 Only the _Jumpbox____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: 10.0.0.5, 10.0.0.6, 10.0.0.8_
 
-Machines within the network can only be accessed by SSH_____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-Jumpbox
-Elk VM - 10.1.0.4
-JumpBox VM - 10.0.0.4
+Machines within the network can only be accessed by SSH.
+- Elk VM - 10.1.0.4
+- JumpBox VM - 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -81,7 +79,6 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _TODO: What is the main advantage of automating configuration with Ansible?_
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - Configure ELK VM with Docker
 - Gathering Facts
 - Install docker.io
@@ -96,13 +93,11 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
 - 10.0.0.5
 - 10.0.0.6	
 - 10.0.0.8
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
 -filebeats
 -metricbeats
 
