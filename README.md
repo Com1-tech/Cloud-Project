@@ -6,22 +6,18 @@ The files in this repository were used to configure the network depicted below.
 
 https://drive.google.com/file/d/1W2QTm4n7qnOQFCk1qtIDhFlKXLtcWaWV/view?usp=sharing
 
-![](Images/Network-Diagram.png)
+![TODO: Update the path with the name of your screenshot of docker ps output](Images/Network-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, selected portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
-
   - elk.yml
 
-
-
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
-
 
 ### Description of the Topology
 
@@ -29,16 +25,15 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
 
-- _TODO: What aspect of security do load balancers protect? 
-The off-loading function of a load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It does this by shifting attack traffic from the corporate server to a public cloud provider.
+-The off-loading function of a load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It does this by shifting attack traffic from the corporate server to a public cloud provider.
 
 What is the advantage of a jump box?_
 
-Creates a separation between networks with different security requirements. Acts as a single audit point for traffic and a single place where user accounts can be managed. Provides auditing control. 
+A jumpbox creates a separation between networks with different security requirements. Acts as a single audit point for traffic and a single place where user accounts can be managed. Provides auditing control. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the "file systems of the VMs on network" and "system metrics".
-- _TODO: What does Filebeat watch for?_Logs information about file systems and files that have changed and when.
-- _TODO: What does Metricbeat record?_Detects changes in system metrics, such as CPU usage.  Failed SSH login attempts, failed sudo escalations and CPU/RAM statistics.
+- Filebeats watch for log info about file systems and files that have changed and when.
+- Metricbeat records and detects changes in system metrics, such as CPU usage, failed SSH login attempts, failed sudo escalations and CPU/RAM statistics.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -56,8 +51,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _Jumpbox____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: 10.0.0.5, 10.0.0.6, 10.0.0.8_
+Only the _Jumpbox_ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 10.0.0.5
+- 10.0.0.6
+- 10.0.0.8
 
 Machines within the network can only be accessed by SSH.
 - Elk VM - 10.1.0.4
