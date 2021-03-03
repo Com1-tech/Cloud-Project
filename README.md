@@ -1,11 +1,20 @@
 # Cloud-Project
 Azure Environment
+<<<<<<< HEAD
 
+=======
+>>>>>>> be19f20c95c9cd0eab065fa4b05d453bb4c7f2d9
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.
 
+<<<<<<< HEAD
 https://github.com/Com1-tech/Cloud-Project/tree/main/Diagrams(Images/Network-Diagram.drawio)
+=======
+https://github.com/Com1-tech/Cloud-Project/tree/main/Diagrams
+
+(Images/Network-Diagram.png)
+>>>>>>> be19f20c95c9cd0eab065fa4b05d453bb4c7f2d9
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, selected portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -121,4 +130,8 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
+<<<<<<< HEAD
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+=======
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+>>>>>>> be19f20c95c9cd0eab065fa4b05d453bb4c7f2d9
