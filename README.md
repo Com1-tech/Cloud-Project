@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 https://drive.google.com/file/d/1W2QTm4n7qnOQFCk1qtIDhFlKXLtcWaWV/view?usp=sharing
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/Network-Diagram.png)
+(Images/Network-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, selected portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
   - elk.yml
@@ -23,11 +23,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network.
-
--The off-loading function of a load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It does this by shifting attack traffic from the corporate server to a public cloud provider.
-
-What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting inbound access to the network. The off-loading function of a load balancer defends an organization against distributed denial-of-service (DDoS) attacks. It does this by shifting attack traffic from the corporate server to a public cloud provider.
 
 A jumpbox creates a separation between networks with different security requirements. Acts as a single audit point for traffic and a single place where user accounts can be managed. Provides auditing control. 
 
@@ -64,9 +60,12 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes/No              | 104.45.196.7         |
+| ELK      | No                  | 10.1.0.4             |
+| Web-1    | No                  | 10.0.0.5             |
+| Web-2    | No                  | 10.0.0.6             |
+| Web-3    | No                  | 10.0.0.8             |
+|
 
 ### Elk Configuration
 
@@ -99,15 +98,20 @@ We have installed the following Beats on these machines:
 -metricbeats
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat: Detects changes to the filesystem. Collect Apache Logs
+- Metricbeat: Detects changes in system metrics 
+    -CPU Usage
+    -Detect SSH login attempts
+    -Failed sudo escalations
+    -CPU/RAM statistics
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the playbooks to the Ansible Control Node
+- Update the correct IP addreses and Ports
+- Run the playbook, and navigate to web servers check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
